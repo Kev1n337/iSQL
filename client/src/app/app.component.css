@@ -1,0 +1,22 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+.widthClass {
+  width:80%;
+}
+
+#executeButton {
+  display: inline-block;
+}
+
+.input-container {
+  margin-top:20px;
+  text-align: center;
+}
+
+mat-toolbar {
+
+}

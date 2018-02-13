@@ -1,0 +1,12 @@
+<div class="body-1">
+  <section class="mat-typography">
+    <mat-grid-list cols="2" rowHeight="6:1">
+      <mat-grid-tile>Key</mat-grid-tile>
+      <mat-grid-tile>Value</mat-grid-tile>
+      <div *ngFor="let key of resultMap.keys();">
+        <mat-grid-tile>{{key}}</mat-grid-tile>
+        <mat-grid-tile>{{resultMap.get(key)}}</mat-grid-tile>
+      </div>
+    </mat-grid-list>
+  </section>
+</div>

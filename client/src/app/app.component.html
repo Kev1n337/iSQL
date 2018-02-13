@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary" class="mat-elevation-z5">
+  Interactive SQL with Angular and Express.js
+</mat-toolbar>
+<div class="input-container">
+  <mat-form-field class="widthClass">
+    <input #sqlStmt class="sqlInput" matInput placeholder="SQL-Statement" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let query of examples" [value]="query.query">
+        <span>{{ query.display }}</span>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <button id="executeButton" mat-raised-button color="primary" (click)="execute(sqlStmt.value)">Execute</button>
+</div>
+
+<app-table [tableKeys]="tableKeys" [rows]="rows" *ngIf="shouldShowTable"></app-table>
+<app-result-obj [resultMap]="resultMap" *ngIf="shouldShowResult"></app-result-obj>
